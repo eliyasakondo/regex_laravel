@@ -11,11 +11,11 @@
 |
 */
 
-use App\HTTP\Controllers\UserConroller;
+use App\HTTP\Controllers\UserController;
 
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/file-import', [UserConroller::class, 'importView'])->name('import-view');
-Route::post('import', [UserConroller::class, 'import'])->name('import');
-Route::get('export-users', [UserConroller::class, 'exportUsers'])->name('export-users');
+Route::get('/file-import', [UserController::class, 'importView'])->name('import-view');
+Route::post('/import', [UserController::class, 'import'])->name('import');
+Route::get('/export-users', [UserController::class, 'exportUsers'])->name('export-users');
